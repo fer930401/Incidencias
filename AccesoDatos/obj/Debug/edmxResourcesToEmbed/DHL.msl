@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DHL_SCModelStoreContainer" CdmEntityContainer="DHL_SCEntities">
+    <EntitySetMapping Name="tbl_cat_familia">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_familia">
+        <MappingFragment StoreEntitySet="tbl_cat_familia">
+          <ScalarProperty Name="nom_familia" ColumnName="nom_familia" />
+          <ScalarProperty Name="cve_familia" ColumnName="cve_familia" />
+          <ScalarProperty Name="id_familia" ColumnName="id_familia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_incidencia">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_incidencia">
+        <MappingFragment StoreEntitySet="tbl_cat_incidencia">
+          <ScalarProperty Name="nom_incidencia" ColumnName="nom_incidencia" />
+          <ScalarProperty Name="cve_incidencia" ColumnName="cve_incidencia" />
+          <ScalarProperty Name="id_incidencia" ColumnName="id_incidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_matAfectado">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_matAfectado">
+        <MappingFragment StoreEntitySet="tbl_cat_matAfectado">
+          <ScalarProperty Name="nom_material" ColumnName="nom_material" />
+          <ScalarProperty Name="cve_material" ColumnName="cve_material" />
+          <ScalarProperty Name="id_material" ColumnName="id_material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_origen">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_origen">
+        <MappingFragment StoreEntitySet="tbl_cat_origen">
+          <ScalarProperty Name="nom_origen" ColumnName="nom_origen" />
+          <ScalarProperty Name="cve_origen" ColumnName="cve_origen" />
+          <ScalarProperty Name="id_origen" ColumnName="id_origen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_sts">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_sts">
+        <MappingFragment StoreEntitySet="tbl_cat_sts">
+          <ScalarProperty Name="nom_sts" ColumnName="nom_sts" />
+          <ScalarProperty Name="cve_sts" ColumnName="cve_sts" />
+          <ScalarProperty Name="id_sts" ColumnName="id_sts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_turno">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_turno">
+        <MappingFragment StoreEntitySet="tbl_cat_turno">
+          <ScalarProperty Name="nom_turno" ColumnName="nom_turno" />
+          <ScalarProperty Name="cve_turno" ColumnName="cve_turno" />
+          <ScalarProperty Name="id_turno" ColumnName="id_turno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_cat_udm">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_cat_udm">
+        <MappingFragment StoreEntitySet="tbl_cat_udm">
+          <ScalarProperty Name="nom_udm" ColumnName="nom_udm" />
+          <ScalarProperty Name="cve_udm" ColumnName="cve_udm" />
+          <ScalarProperty Name="id_udm" ColumnName="id_udm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_cons_datos" FunctionName="DHL_SCModel.Store.sp_cons_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_datos_Result">
+          <ScalarProperty Name="cve_dato" ColumnName="cve_dato" />
+          <ScalarProperty Name="dato" ColumnName="dato" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_cons_incidencias" FunctionName="DHL_SCModel.Store.sp_cons_incidencias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_incidencias_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fec_registro" ColumnName="fec_registro" />
+          <ScalarProperty Name="no_STO" ColumnName="no_STO" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+          <ScalarProperty Name="incidencia" ColumnName="incidencia" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="factura" ColumnName="factura" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="udm" ColumnName="udm" />
+          <ScalarProperty Name="sts" ColumnName="sts" />
+          <ScalarProperty Name="fec_cierre" ColumnName="fec_cierre" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_Adm_incidencias" FunctionName="DHL_SCModel.Store.sp_Adm_incidencias">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_Adm_incidencias_Result">
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="tbl_inc_img">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_inc_img">
+        <MappingFragment StoreEntitySet="tbl_inc_img">
+          <ScalarProperty Name="sacos_daña" ColumnName="sacos_daña" />
+          <ScalarProperty Name="conte_fila" ColumnName="conte_fila" />
+          <ScalarProperty Name="tarima_dañada" ColumnName="tarima_dañada" />
+          <ScalarProperty Name="acerca_pallet" ColumnName="acerca_pallet" />
+          <ScalarProperty Name="fila_pallet" ColumnName="fila_pallet" />
+          <ScalarProperty Name="fila_frontal" ColumnName="fila_frontal" />
+          <ScalarProperty Name="id_inc" ColumnName="id_inc" />
+          <ScalarProperty Name="id_img" ColumnName="id_img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_incidencias">
+      <EntityTypeMapping TypeName="DHL_SCModel.tbl_incidencias">
+        <MappingFragment StoreEntitySet="tbl_incidencias">
+          <ScalarProperty Name="fec_actualizacion" ColumnName="fec_actualizacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
+          <ScalarProperty Name="evidencia" ColumnName="evidencia" />
+          <ScalarProperty Name="cve_sts" ColumnName="cve_sts" />
+          <ScalarProperty Name="atendido" ColumnName="atendido" />
+          <ScalarProperty Name="fec_cierre" ColumnName="fec_cierre" />
+          <ScalarProperty Name="accion_Contencion" ColumnName="accion_Contencion" />
+          <ScalarProperty Name="operador" ColumnName="operador" />
+          <ScalarProperty Name="transporte" ColumnName="transporte" />
+          <ScalarProperty Name="norma_estiba" ColumnName="norma_estiba" />
+          <ScalarProperty Name="cve_udm" ColumnName="cve_udm" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="cve_material" ColumnName="cve_material" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="lote" ColumnName="lote" />
+          <ScalarProperty Name="factura" ColumnName="factura" />
+          <ScalarProperty Name="PO" ColumnName="PO" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="cve_origen" ColumnName="cve_origen" />
+          <ScalarProperty Name="cve_familia" ColumnName="cve_familia" />
+          <ScalarProperty Name="cve_incidiencia" ColumnName="cve_incidiencia" />
+          <ScalarProperty Name="aut_coord" ColumnName="aut_coord" />
+          <ScalarProperty Name="cve_turno" ColumnName="cve_turno" />
+          <ScalarProperty Name="no_STO" ColumnName="no_STO" />
+          <ScalarProperty Name="fec_registro" ColumnName="fec_registro" />
+          <ScalarProperty Name="id_incidencia" ColumnName="id_incidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_cons_img" FunctionName="DHL_SCModel.Store.sp_cons_img">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_img_Result">
+          <ScalarProperty Name="fila_frontal" ColumnName="fila_frontal" />
+          <ScalarProperty Name="fila_pallet" ColumnName="fila_pallet" />
+          <ScalarProperty Name="acerca_pallet" ColumnName="acerca_pallet" />
+          <ScalarProperty Name="tarima_dañada" ColumnName="tarima_dañada" />
+          <ScalarProperty Name="sacos_daña" ColumnName="sacos_daña" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_adm_opciones" FunctionName="DHL_SCModel.Store.sp_adm_opciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_adm_opciones_Result">
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

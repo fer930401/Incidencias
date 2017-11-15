@@ -1,0 +1,11 @@
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\AccesoDatos.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\Entidades.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\EntityFramework.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\Entidades.pdb
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\bin\Debug\EntityFramework.xml
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

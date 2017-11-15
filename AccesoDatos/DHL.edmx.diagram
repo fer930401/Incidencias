@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4cf6c846e8244c08817e2869488d847f" Name="Diagram1" ZoomLevel="57">
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_familia" Width="1.5" PointX="0.75" PointY="12.375" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_incidencia" Width="1.5" PointX="0.75" PointY="14.875" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_matAfectado" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_origen" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_sts" Width="1.5" PointX="0.75" PointY="9.875" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_turno" Width="1.5" PointX="0.75" PointY="20" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_cat_udm" Width="1.5" PointX="0.75" PointY="17.5" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_inc_img" Width="1.5" PointX="5.25" PointY="11.5" />
+        <EntityTypeShape EntityType="DHL_SCModel.tbl_incidencias" Width="1.5" PointX="3" PointY="9" />
+        <AssociationConnector Association="DHL_SCModel.fk_familia" />
+        <AssociationConnector Association="DHL_SCModel.fk_incidencia" />
+        <AssociationConnector Association="DHL_SCModel.fk_matAfectado" />
+        <AssociationConnector Association="DHL_SCModel.fk_origen" />
+        <AssociationConnector Association="DHL_SCModel.fk_sts" />
+        <AssociationConnector Association="DHL_SCModel.fk_turno" />
+        <AssociationConnector Association="DHL_SCModel.fk_udm" />
+        <AssociationConnector Association="DHL_SCModel.fk_Imagen" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

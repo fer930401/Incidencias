@@ -1,0 +1,10 @@
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\Entidades.dll.config
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\Entidades.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\Entidades.pdb
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\EntityFramework.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\EntityFramework.xml
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.dll
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.pdb
+c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
