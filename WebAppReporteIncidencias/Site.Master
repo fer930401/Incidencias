@@ -34,7 +34,8 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="Index.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                         <li><a runat="server" href="AltaIncidencias.aspx"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Registra Incidencia</a></li>
-                        <li><a runat="server" href="Incidencias.aspx"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Consulta Incidencias</a></li>
+                        <li><a runat="server" href="Incidencias.aspx"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Administra Incidencias</a></li>
+                        <li><a runat="server" href="Estadisticas.aspx"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Estadisticas</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Opciones <span class="caret"></span></a>
                             <ul class="dropdown-menu">

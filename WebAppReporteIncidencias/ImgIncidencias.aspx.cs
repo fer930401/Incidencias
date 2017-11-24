@@ -58,7 +58,13 @@ namespace WebAppReporteIncidencias
                     }
                     else
                     {
-                        dt.Rows.Add(fileName1, "~/Images/error.png");
+                        dr["fila_frontal"] = "~/Images/error.png";
+                        dr["fila_pallet"] = "~/Images/error.png";
+                        dr["acerca_pallet"] = "~/Images/error.png";
+                        dr["tarima_danada"] = "~/Images/error.png";
+                        dr["sacos_dana"] = "~/Images/error.png";
+                        dt.Rows.Add(dr);
+                        //dt.Rows.Add(fileName1, "~/Images/error.png");
                     }
                     /*dr["fila_frontal"] = String.Format("data:image/gif;base64,{0}", elemento.fila_frontal);
                     dr["fila_pallet"] = String.Format("data:image/gif;base64,{0}", elemento.fila_pallet);
