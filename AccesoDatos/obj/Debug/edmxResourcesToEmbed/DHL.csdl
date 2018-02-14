@@ -8,9 +8,6 @@
     <EntitySet Name="tbl_cat_sts" EntityType="DHL_SCModel.tbl_cat_sts" />
     <EntitySet Name="tbl_cat_turno" EntityType="DHL_SCModel.tbl_cat_turno" />
     <EntitySet Name="tbl_cat_udm" EntityType="DHL_SCModel.tbl_cat_udm" />
-    <FunctionImport Name="sp_cons_datos" ReturnType="Collection(DHL_SCModel.sp_cons_datos_Result)">
-      <Parameter Name="opc" Mode="In" Type="Int32" />
-    </FunctionImport>
     <FunctionImport Name="sp_cons_incidencias" ReturnType="Collection(DHL_SCModel.sp_cons_incidencias_Result)">
       <Parameter Name="opc" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -89,6 +86,11 @@
       <Parameter Name="opc" Mode="In" Type="Int32" />
       <Parameter Name="sub_opc" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="sp_cons_datos" ReturnType="Collection(DHL_SCModel.sp_cons_datos_Result)">
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+      <Parameter Name="cve_filtro" Mode="In" Type="String" />
+      <Parameter Name="cve_filtro2" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="tbl_cat_familia">
     <Key>
@@ -153,10 +155,6 @@
     <Property Name="nom_udm" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_udm" FromRole="tbl_cat_udm" ToRole="tbl_incidencias" />
   </EntityType>
-  <ComplexType Name="sp_cons_datos_Result">
-    <Property Type="String" Name="cve_dato" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="dato" Nullable="true" MaxLength="50" />
-  </ComplexType>
   <ComplexType Name="sp_cons_incidencias_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="DateTime" Name="fec_registro" Nullable="false" Precision="23" />
@@ -337,5 +335,9 @@
   <ComplexType Name="sp_adm_opciones_Result">
     <Property Type="Int32" Name="error" Nullable="true" />
     <Property Type="String" Name="mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_cons_datos_Result">
+    <Property Type="String" Name="cve_dato" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="dato" Nullable="true" MaxLength="50" />
   </ComplexType>
 </Schema>

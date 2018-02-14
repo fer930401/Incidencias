@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DHL_SCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DHL_SCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_cat_familia">
           <Key>
             <PropertyRef Name="cve_familia" />
@@ -240,6 +240,8 @@
         </Function>
         <Function Name="sp_cons_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="opc" Type="int" Mode="In" />
+          <Parameter Name="cve_filtro" Type="nvarchar" Mode="In" />
+          <Parameter Name="cve_filtro2" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_cons_img" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idInc" Type="int" Mode="In" />
@@ -303,9 +305,6 @@
           <EntitySet Name="tbl_cat_sts" EntityType="DHL_SCModel.tbl_cat_sts" />
           <EntitySet Name="tbl_cat_turno" EntityType="DHL_SCModel.tbl_cat_turno" />
           <EntitySet Name="tbl_cat_udm" EntityType="DHL_SCModel.tbl_cat_udm" />
-          <FunctionImport Name="sp_cons_datos" ReturnType="Collection(DHL_SCModel.sp_cons_datos_Result)">
-          <Parameter Name="opc" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="sp_cons_incidencias" ReturnType="Collection(DHL_SCModel.sp_cons_incidencias_Result)">
           <Parameter Name="opc" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -384,6 +383,11 @@
             <Parameter Name="opc" Mode="In" Type="Int32" />
             <Parameter Name="sub_opc" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="sp_cons_datos" ReturnType="Collection(DHL_SCModel.sp_cons_datos_Result)">
+            <Parameter Name="opc" Mode="In" Type="Int32" />
+            <Parameter Name="cve_filtro" Mode="In" Type="String" />
+            <Parameter Name="cve_filtro2" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tbl_cat_familia">
           <Key>
@@ -448,10 +452,6 @@
           <Property Name="nom_udm" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_udm" FromRole="tbl_cat_udm" ToRole="tbl_incidencias" />
         </EntityType>
-        <ComplexType Name="sp_cons_datos_Result">
-          <Property Type="String" Name="cve_dato" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="dato" Nullable="true" MaxLength="50" />
-        </ComplexType>
         <ComplexType Name="sp_cons_incidencias_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
           <Property Type="DateTime" Name="fec_registro" Nullable="false" Precision="23" />
@@ -633,6 +633,10 @@
           <Property Type="Int32" Name="error" Nullable="true" />
           <Property Type="String" Name="mensaje" Nullable="true" />
         </ComplexType>
+        <ComplexType Name="sp_cons_datos_Result">
+          <Property Type="String" Name="cve_dato" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="dato" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -702,14 +706,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="sp_cons_datos" FunctionName="DHL_SCModel.Store.sp_cons_datos">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_datos_Result">
-                <ScalarProperty Name="cve_dato" ColumnName="cve_dato" />
-                <ScalarProperty Name="dato" ColumnName="dato" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_cons_incidencias" FunctionName="DHL_SCModel.Store.sp_cons_incidencias">
             <ResultMapping>
               <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_incidencias_Result">
@@ -801,6 +797,14 @@
               <ComplexTypeMapping TypeName="DHL_SCModel.sp_adm_opciones_Result">
                 <ScalarProperty Name="error" ColumnName="error" />
                 <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_cons_datos" FunctionName="DHL_SCModel.Store.sp_cons_datos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_datos_Result">
+                <ScalarProperty Name="cve_dato" ColumnName="cve_dato" />
+                <ScalarProperty Name="dato" ColumnName="dato" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

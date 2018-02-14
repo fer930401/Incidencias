@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHL_SCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DHL_SCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_cat_familia" EntityType="DHL_SCModel.tbl_cat_familia" />
+    <EntitySet Name="tbl_cat_incidencia" EntityType="DHL_SCModel.tbl_cat_incidencia" />
+    <EntitySet Name="tbl_cat_matAfectado" EntityType="DHL_SCModel.tbl_cat_matAfectado" />
+    <EntitySet Name="tbl_cat_origen" EntityType="DHL_SCModel.tbl_cat_origen" />
+    <EntitySet Name="tbl_cat_sts" EntityType="DHL_SCModel.tbl_cat_sts" />
+    <EntitySet Name="tbl_cat_turno" EntityType="DHL_SCModel.tbl_cat_turno" />
+    <EntitySet Name="tbl_cat_udm" EntityType="DHL_SCModel.tbl_cat_udm" />
+    <FunctionImport Name="sp_cons_incidencias" ReturnType="Collection(DHL_SCModel.sp_cons_incidencias_Result)">
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Adm_incidencias" ReturnType="Collection(DHL_SCModel.sp_Adm_incidencias_Result)">
+      <Parameter Name="fec_registro" Mode="In" Type="DateTime" />
+      <Parameter Name="no_STO" Mode="In" Type="String" />
+      <Parameter Name="cve_turno" Mode="In" Type="String" />
+      <Parameter Name="aut_coord" Mode="In" Type="String" />
+      <Parameter Name="cve_incidiencia" Mode="In" Type="String" />
+      <Parameter Name="cve_familia" Mode="In" Type="String" />
+      <Parameter Name="cve_origen" Mode="In" Type="String" />
+      <Parameter Name="codigo" Mode="In" Type="String" />
+      <Parameter Name="PO" Mode="In" Type="String" />
+      <Parameter Name="factura" Mode="In" Type="String" />
+      <Parameter Name="lote" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="cve_material" Mode="In" Type="String" />
+      <Parameter Name="cantidad" Mode="In" Type="Double" />
+      <Parameter Name="cve_udm" Mode="In" Type="String" />
+      <Parameter Name="norma_estiba" Mode="In" Type="String" />
+      <Parameter Name="transporte" Mode="In" Type="String" />
+      <Parameter Name="operador" Mode="In" Type="String" />
+      <Parameter Name="accion_Contencion" Mode="In" Type="String" />
+      <Parameter Name="fec_cierre" Mode="In" Type="DateTime" />
+      <Parameter Name="atendido" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+      <Parameter Name="evidencia" Mode="In" Type="String" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="filaFrontal" Mode="In" Type="String" />
+      <Parameter Name="filaPallet" Mode="In" Type="String" />
+      <Parameter Name="acercaPallet" Mode="In" Type="String" />
+      <Parameter Name="tarimaDanada" Mode="In" Type="String" />
+      <Parameter Name="sacosDanado" Mode="In" Type="String" />
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="tbl_inc_img" EntityType="DHL_SCModel.tbl_inc_img" />
+    <EntitySet Name="tbl_incidencias" EntityType="DHL_SCModel.tbl_incidencias" />
+    <AssociationSet Name="fk_familia" Association="DHL_SCModel.fk_familia">
+      <End Role="tbl_cat_familia" EntitySet="tbl_cat_familia" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_incidencia" Association="DHL_SCModel.fk_incidencia">
+      <End Role="tbl_cat_incidencia" EntitySet="tbl_cat_incidencia" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_matAfectado" Association="DHL_SCModel.fk_matAfectado">
+      <End Role="tbl_cat_matAfectado" EntitySet="tbl_cat_matAfectado" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_origen" Association="DHL_SCModel.fk_origen">
+      <End Role="tbl_cat_origen" EntitySet="tbl_cat_origen" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sts" Association="DHL_SCModel.fk_sts">
+      <End Role="tbl_cat_sts" EntitySet="tbl_cat_sts" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_turno" Association="DHL_SCModel.fk_turno">
+      <End Role="tbl_cat_turno" EntitySet="tbl_cat_turno" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_udm" Association="DHL_SCModel.fk_udm">
+      <End Role="tbl_cat_udm" EntitySet="tbl_cat_udm" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Imagen" Association="DHL_SCModel.fk_Imagen">
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+      <End Role="tbl_inc_img" EntitySet="tbl_inc_img" />
+    </AssociationSet>
+    <FunctionImport Name="sp_cons_img" ReturnType="Collection(DHL_SCModel.sp_cons_img_Result)">
+      <Parameter Name="idInc" Mode="In" Type="Int32" />
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_adm_opciones" ReturnType="Collection(DHL_SCModel.sp_adm_opciones_Result)">
+      <Parameter Name="nom_opc" Mode="In" Type="String" />
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+      <Parameter Name="sub_opc" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_cons_datos" ReturnType="Collection(DHL_SCModel.sp_cons_datos_Result)">
+      <Parameter Name="opc" Mode="In" Type="Int32" />
+      <Parameter Name="cve_filtro" Mode="In" Type="String" />
+      <Parameter Name="cve_filtro2" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="tbl_cat_familia">
+    <Key>
+      <PropertyRef Name="cve_familia" />
+    </Key>
+    <Property Name="id_familia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_familia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_familia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_familia" FromRole="tbl_cat_familia" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_incidencia">
+    <Key>
+      <PropertyRef Name="cve_incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_incidencia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_incidencia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_incidencia" FromRole="tbl_cat_incidencia" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_matAfectado">
+    <Key>
+      <PropertyRef Name="cve_material" />
+    </Key>
+    <Property Name="id_material" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_material" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_material" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_matAfectado" FromRole="tbl_cat_matAfectado" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_origen">
+    <Key>
+      <PropertyRef Name="cve_origen" />
+    </Key>
+    <Property Name="id_origen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_origen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_origen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_origen" FromRole="tbl_cat_origen" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_sts">
+    <Key>
+      <PropertyRef Name="cve_sts" />
+    </Key>
+    <Property Name="id_sts" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_sts" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_sts" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_sts" FromRole="tbl_cat_sts" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_turno">
+    <Key>
+      <PropertyRef Name="cve_turno" />
+    </Key>
+    <Property Name="id_turno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_turno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_turno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_turno" FromRole="tbl_cat_turno" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_cat_udm">
+    <Key>
+      <PropertyRef Name="cve_udm" />
+    </Key>
+    <Property Name="id_udm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cve_udm" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nom_udm" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_udm" FromRole="tbl_cat_udm" ToRole="tbl_incidencias" />
+  </EntityType>
+  <ComplexType Name="sp_cons_incidencias_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="DateTime" Name="fec_registro" Nullable="false" Precision="23" />
+    <Property Type="String" Name="no_STO" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="turno" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="incidencia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="codigo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="factura" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="lote" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="material" Nullable="false" MaxLength="50" />
+    <Property Type="Double" Name="cantidad" Nullable="true" />
+    <Property Type="String" Name="udm" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="sts" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fec_cierre" Nullable="true" Precision="23" />
+    <Property Type="String" Name="observacion" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="sp_Adm_incidencias_Result">
+    <Property Type="Int32" Name="error" Nullable="true" />
+    <Property Type="String" Name="mensaje" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="tbl_inc_img">
+    <Key>
+      <PropertyRef Name="id_img" />
+    </Key>
+    <Property Name="id_img" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_inc" Type="Int32" Nullable="false" />
+    <Property Name="fila_frontal" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fila_pallet" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="acerca_pallet" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tarima_dañada" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="conte_fila" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sacos_daña" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbl_incidencias" Relationship="DHL_SCModel.fk_Imagen" FromRole="tbl_inc_img" ToRole="tbl_incidencias" />
+  </EntityType>
+  <EntityType Name="tbl_incidencias">
+    <Key>
+      <PropertyRef Name="id_incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fec_registro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="no_STO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cve_turno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="aut_coord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cve_incidiencia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cve_familia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cve_origen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="factura" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lote" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cve_material" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Double" />
+    <Property Name="cve_udm" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="norma_estiba" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="transporte" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="operador" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="accion_Contencion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fec_cierre" Type="DateTime" Precision="3" />
+    <Property Name="atendido" Type="Int32" Nullable="false" />
+    <Property Name="cve_sts" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="evidencia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="observacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fec_actualizacion" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tbl_cat_familia" Relationship="DHL_SCModel.fk_familia" FromRole="tbl_incidencias" ToRole="tbl_cat_familia" />
+    <NavigationProperty Name="tbl_cat_incidencia" Relationship="DHL_SCModel.fk_incidencia" FromRole="tbl_incidencias" ToRole="tbl_cat_incidencia" />
+    <NavigationProperty Name="tbl_cat_matAfectado" Relationship="DHL_SCModel.fk_matAfectado" FromRole="tbl_incidencias" ToRole="tbl_cat_matAfectado" />
+    <NavigationProperty Name="tbl_cat_origen" Relationship="DHL_SCModel.fk_origen" FromRole="tbl_incidencias" ToRole="tbl_cat_origen" />
+    <NavigationProperty Name="tbl_cat_sts" Relationship="DHL_SCModel.fk_sts" FromRole="tbl_incidencias" ToRole="tbl_cat_sts" />
+    <NavigationProperty Name="tbl_cat_turno" Relationship="DHL_SCModel.fk_turno" FromRole="tbl_incidencias" ToRole="tbl_cat_turno" />
+    <NavigationProperty Name="tbl_cat_udm" Relationship="DHL_SCModel.fk_udm" FromRole="tbl_incidencias" ToRole="tbl_cat_udm" />
+    <NavigationProperty Name="tbl_inc_img" Relationship="DHL_SCModel.fk_Imagen" FromRole="tbl_incidencias" ToRole="tbl_inc_img" />
+  </EntityType>
+  <Association Name="fk_familia">
+    <End Type="DHL_SCModel.tbl_cat_familia" Role="tbl_cat_familia" Multiplicity="0..1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_familia">
+        <PropertyRef Name="cve_familia" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_familia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_incidencia">
+    <End Type="DHL_SCModel.tbl_cat_incidencia" Role="tbl_cat_incidencia" Multiplicity="1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_incidencia">
+        <PropertyRef Name="cve_incidencia" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_incidiencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_matAfectado">
+    <End Type="DHL_SCModel.tbl_cat_matAfectado" Role="tbl_cat_matAfectado" Multiplicity="0..1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_matAfectado">
+        <PropertyRef Name="cve_material" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_origen">
+    <End Type="DHL_SCModel.tbl_cat_origen" Role="tbl_cat_origen" Multiplicity="0..1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_origen">
+        <PropertyRef Name="cve_origen" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_origen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sts">
+    <End Type="DHL_SCModel.tbl_cat_sts" Role="tbl_cat_sts" Multiplicity="1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_sts">
+        <PropertyRef Name="cve_sts" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_sts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_turno">
+    <End Type="DHL_SCModel.tbl_cat_turno" Role="tbl_cat_turno" Multiplicity="1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_turno">
+        <PropertyRef Name="cve_turno" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_turno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_udm">
+    <End Type="DHL_SCModel.tbl_cat_udm" Role="tbl_cat_udm" Multiplicity="0..1" />
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_udm">
+        <PropertyRef Name="cve_udm" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_udm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Imagen">
+    <End Type="DHL_SCModel.tbl_incidencias" Role="tbl_incidencias" Multiplicity="1" />
+    <End Type="DHL_SCModel.tbl_inc_img" Role="tbl_inc_img" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_incidencias">
+        <PropertyRef Name="id_incidencia" />
+      </Principal>
+      <Dependent Role="tbl_inc_img">
+        <PropertyRef Name="id_inc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_cons_img_Result">
+    <Property Type="String" Name="fila_frontal" Nullable="false" />
+    <Property Type="String" Name="fila_pallet" Nullable="false" />
+    <Property Type="String" Name="acerca_pallet" Nullable="false" />
+    <Property Type="String" Name="tarima_dañada" Nullable="false" />
+    <Property Type="String" Name="sacos_daña" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_adm_opciones_Result">
+    <Property Type="Int32" Name="error" Nullable="true" />
+    <Property Type="String" Name="mensaje" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_cons_datos_Result">
+    <Property Type="String" Name="cve_dato" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="dato" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

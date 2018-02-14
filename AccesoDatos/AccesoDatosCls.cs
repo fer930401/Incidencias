@@ -16,9 +16,9 @@ namespace AccesoDatos
             contexto = new DHL_SCEntities();
         }
 
-        public List<sp_cons_datos_Result> consultaDatos(int? opc)
+        public List<sp_cons_datos_Result> consultaDatos(int? opc,string cve1, string cve2)
         {
-            return (contexto.sp_cons_datos(opc)).ToList();
+            return (contexto.sp_cons_datos(opc,cve1,cve2)).ToList();
         }
 
         public Entidades.sp_Adm_incidencias_Result insertaIncidencia(DateTime fec_registro, string no_STO, string cve_turno, string aut_coord, string cve_incidencia, string cve_familia, string cve_origen, string codigo, string PO, string factura, string lote, string descripcion, string cve_material, short? cantidad, string cve_udm, string nom_estiba, string transporte, string operador, string accion, DateTime fec_cierre, int? atendido, string cve_sts, string evidencia, string observacion, string filaFrontal, string filaPallet, string acercaPallet, string tarimaDanada, string sacosDanado, int? opc)

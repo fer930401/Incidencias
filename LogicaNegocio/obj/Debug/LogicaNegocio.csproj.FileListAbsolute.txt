@@ -9,3 +9,17 @@ c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Lo
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.dll
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\LogicaNegocio\obj\Debug\LogicaNegocio.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\LogicaNegocio.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\LogicaNegocio.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\AccesoDatos.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\Entidades.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\EntityFramework.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\AccesoDatos.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\AccesoDatos.dll.config
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\Entidades.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\Entidades.dll.config
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\bin\Debug\EntityFramework.xml
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\obj\Debug\LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\obj\Debug\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\obj\Debug\LogicaNegocio.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\LogicaNegocio\obj\Debug\LogicaNegocio.pdb

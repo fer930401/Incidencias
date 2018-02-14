@@ -1,0 +1,10 @@
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\Entidades.dll.config
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\Entidades.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\Entidades.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\EntityFramework.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\EntityFramework.xml
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Release\Entidades.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Release\Entidades.pdb

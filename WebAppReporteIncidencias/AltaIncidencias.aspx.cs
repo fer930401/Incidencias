@@ -27,37 +27,37 @@ namespace WebAppReporteIncidencias
 
         private void llenaCombos()
         {
-            ddlTurno.DataSource = logicaNegocio.consultaDatos(6);
+            ddlTurno.DataSource = logicaNegocio.consultaDatos(6,"","");
             ddlTurno.DataTextField = "dato";
             ddlTurno.DataValueField = "cve_dato";
             ddlTurno.DataBind();
             ddlTurno.Items.Insert(0, new ListItem("Selecciona un turno", "NA"));
 
-            ddlIncidencia.DataSource = logicaNegocio.consultaDatos(2);
+            ddlIncidencia.DataSource = logicaNegocio.consultaDatos(2, "", "");
             ddlIncidencia.DataTextField = "dato";
             ddlIncidencia.DataValueField = "cve_dato";
             ddlIncidencia.DataBind();
             ddlIncidencia.Items.Insert(0, new ListItem("Selecciona una incidencia", "NA"));
 
-            ddlFamilia.DataSource = logicaNegocio.consultaDatos(1);
+            ddlFamilia.DataSource = logicaNegocio.consultaDatos(1, "", "");
             ddlFamilia.DataTextField = "dato";
             ddlFamilia.DataValueField = "cve_dato";
             ddlFamilia.DataBind();
             ddlFamilia.Items.Insert(0, new ListItem("Selecciona una familia", "NA"));
 
-            ddlProveedor.DataSource = logicaNegocio.consultaDatos(4);
+            ddlProveedor.DataSource = logicaNegocio.consultaDatos(4, "", "");
             ddlProveedor.DataTextField = "dato";
             ddlProveedor.DataValueField = "cve_dato";
             ddlProveedor.DataBind();
             ddlProveedor.Items.Insert(0, new ListItem("Selecciona un origen/Proveedor", "NA"));
 
-            ddlMaterial.DataSource = logicaNegocio.consultaDatos(3);
+            ddlMaterial.DataSource = logicaNegocio.consultaDatos(3, "", "");
             ddlMaterial.DataTextField = "dato";
             ddlMaterial.DataValueField = "cve_dato";
             ddlMaterial.DataBind();
             ddlMaterial.Items.Insert(0, new ListItem("Selecciona un material", "NA"));
 
-            ddlUdm.DataSource = logicaNegocio.consultaDatos(7);
+            ddlUdm.DataSource = logicaNegocio.consultaDatos(7, "", "");
             ddlUdm.DataTextField = "dato";
             ddlUdm.DataValueField = "cve_dato";
             ddlUdm.DataBind();

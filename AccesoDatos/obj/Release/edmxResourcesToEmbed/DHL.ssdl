@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DHL_SCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_cat_familia">
+    <Key>
+      <PropertyRef Name="cve_familia" />
+    </Key>
+    <Property Name="id_familia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_familia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_familia" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_incidencia">
+    <Key>
+      <PropertyRef Name="cve_incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_incidencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_incidencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_matAfectado">
+    <Key>
+      <PropertyRef Name="cve_material" />
+    </Key>
+    <Property Name="id_material" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_material" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_material" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_origen">
+    <Key>
+      <PropertyRef Name="cve_origen" />
+    </Key>
+    <Property Name="id_origen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_origen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_origen" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_sts">
+    <Key>
+      <PropertyRef Name="cve_sts" />
+    </Key>
+    <Property Name="id_sts" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_sts" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_sts" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_turno">
+    <Key>
+      <PropertyRef Name="cve_turno" />
+    </Key>
+    <Property Name="id_turno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_turno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_turno" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_cat_udm">
+    <Key>
+      <PropertyRef Name="cve_udm" />
+    </Key>
+    <Property Name="id_udm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cve_udm" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="nom_udm" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_inc_img">
+    <Key>
+      <PropertyRef Name="id_img" />
+    </Key>
+    <Property Name="id_img" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_inc" Type="int" Nullable="false" />
+    <Property Name="fila_frontal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="fila_pallet" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="acerca_pallet" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tarima_dañada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="conte_fila" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sacos_daña" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_incidencias">
+    <Key>
+      <PropertyRef Name="id_incidencia" />
+    </Key>
+    <Property Name="id_incidencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fec_registro" Type="datetime" Nullable="false" />
+    <Property Name="no_STO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cve_turno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="aut_coord" Type="nvarchar" MaxLength="50" />
+    <Property Name="cve_incidiencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cve_familia" Type="nvarchar" MaxLength="50" />
+    <Property Name="cve_origen" Type="nvarchar" MaxLength="50" />
+    <Property Name="codigo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PO" Type="nvarchar" MaxLength="50" />
+    <Property Name="factura" Type="nvarchar" MaxLength="50" />
+    <Property Name="lote" Type="nvarchar" MaxLength="50" />
+    <Property Name="descripcion" Type="nvarchar" MaxLength="50" />
+    <Property Name="cve_material" Type="nvarchar" MaxLength="50" />
+    <Property Name="cantidad" Type="float" />
+    <Property Name="cve_udm" Type="nvarchar" MaxLength="50" />
+    <Property Name="norma_estiba" Type="nvarchar" MaxLength="50" />
+    <Property Name="transporte" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="operador" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="accion_Contencion" Type="nvarchar" MaxLength="50" />
+    <Property Name="fec_cierre" Type="datetime" />
+    <Property Name="atendido" Type="int" Nullable="false" />
+    <Property Name="cve_sts" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="evidencia" Type="ntext" />
+    <Property Name="observacion" Type="ntext" />
+    <Property Name="fec_actualizacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_familia">
+    <End Role="tbl_cat_familia" Type="Self.tbl_cat_familia" Multiplicity="0..1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_familia">
+        <PropertyRef Name="cve_familia" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_familia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Imagen">
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="1" />
+    <End Role="tbl_inc_img" Type="Self.tbl_inc_img" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_incidencias">
+        <PropertyRef Name="id_incidencia" />
+      </Principal>
+      <Dependent Role="tbl_inc_img">
+        <PropertyRef Name="id_inc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_incidencia">
+    <End Role="tbl_cat_incidencia" Type="Self.tbl_cat_incidencia" Multiplicity="1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_incidencia">
+        <PropertyRef Name="cve_incidencia" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_incidiencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_matAfectado">
+    <End Role="tbl_cat_matAfectado" Type="Self.tbl_cat_matAfectado" Multiplicity="0..1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_matAfectado">
+        <PropertyRef Name="cve_material" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_origen">
+    <End Role="tbl_cat_origen" Type="Self.tbl_cat_origen" Multiplicity="0..1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_origen">
+        <PropertyRef Name="cve_origen" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_origen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sts">
+    <End Role="tbl_cat_sts" Type="Self.tbl_cat_sts" Multiplicity="1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_sts">
+        <PropertyRef Name="cve_sts" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_sts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_turno">
+    <End Role="tbl_cat_turno" Type="Self.tbl_cat_turno" Multiplicity="1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_turno">
+        <PropertyRef Name="cve_turno" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_turno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_udm">
+    <End Role="tbl_cat_udm" Type="Self.tbl_cat_udm" Multiplicity="0..1" />
+    <End Role="tbl_incidencias" Type="Self.tbl_incidencias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_cat_udm">
+        <PropertyRef Name="cve_udm" />
+      </Principal>
+      <Dependent Role="tbl_incidencias">
+        <PropertyRef Name="cve_udm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_Adm_incidencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fec_registro" Type="date" Mode="In" />
+    <Parameter Name="no_STO" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_turno" Type="nvarchar" Mode="In" />
+    <Parameter Name="aut_coord" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_incidiencia" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_familia" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_origen" Type="nvarchar" Mode="In" />
+    <Parameter Name="codigo" Type="nvarchar" Mode="In" />
+    <Parameter Name="PO" Type="nvarchar" Mode="In" />
+    <Parameter Name="factura" Type="nvarchar" Mode="In" />
+    <Parameter Name="lote" Type="nvarchar" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_material" Type="nvarchar" Mode="In" />
+    <Parameter Name="cantidad" Type="float" Mode="In" />
+    <Parameter Name="cve_udm" Type="nvarchar" Mode="In" />
+    <Parameter Name="norma_estiba" Type="nvarchar" Mode="In" />
+    <Parameter Name="transporte" Type="nvarchar" Mode="In" />
+    <Parameter Name="operador" Type="nvarchar" Mode="In" />
+    <Parameter Name="accion_Contencion" Type="nvarchar" Mode="In" />
+    <Parameter Name="fec_cierre" Type="date" Mode="In" />
+    <Parameter Name="atendido" Type="int" Mode="In" />
+    <Parameter Name="status" Type="nvarchar" Mode="In" />
+    <Parameter Name="evidencia" Type="ntext" Mode="In" />
+    <Parameter Name="observacion" Type="ntext" Mode="In" />
+    <Parameter Name="filaFrontal" Type="ntext" Mode="In" />
+    <Parameter Name="filaPallet" Type="ntext" Mode="In" />
+    <Parameter Name="acercaPallet" Type="ntext" Mode="In" />
+    <Parameter Name="tarimaDanada" Type="ntext" Mode="In" />
+    <Parameter Name="sacosDanado" Type="ntext" Mode="In" />
+    <Parameter Name="opc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_adm_opciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nom_opc" Type="nvarchar" Mode="In" />
+    <Parameter Name="opc" Type="int" Mode="In" />
+    <Parameter Name="sub_opc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_cons_datos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="opc" Type="int" Mode="In" />
+    <Parameter Name="cve_filtro" Type="nvarchar" Mode="In" />
+    <Parameter Name="cve_filtro2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_cons_img" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idInc" Type="int" Mode="In" />
+    <Parameter Name="opc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_cons_incidencias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="opc" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DHL_SCModelStoreContainer">
+    <EntitySet Name="tbl_cat_familia" EntityType="Self.tbl_cat_familia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_incidencia" EntityType="Self.tbl_cat_incidencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_matAfectado" EntityType="Self.tbl_cat_matAfectado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_origen" EntityType="Self.tbl_cat_origen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_sts" EntityType="Self.tbl_cat_sts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_turno" EntityType="Self.tbl_cat_turno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_cat_udm" EntityType="Self.tbl_cat_udm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_inc_img" EntityType="Self.tbl_inc_img" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_incidencias" EntityType="Self.tbl_incidencias" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_familia" Association="Self.fk_familia">
+      <End Role="tbl_cat_familia" EntitySet="tbl_cat_familia" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Imagen" Association="Self.fk_Imagen">
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+      <End Role="tbl_inc_img" EntitySet="tbl_inc_img" />
+    </AssociationSet>
+    <AssociationSet Name="fk_incidencia" Association="Self.fk_incidencia">
+      <End Role="tbl_cat_incidencia" EntitySet="tbl_cat_incidencia" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_matAfectado" Association="Self.fk_matAfectado">
+      <End Role="tbl_cat_matAfectado" EntitySet="tbl_cat_matAfectado" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_origen" Association="Self.fk_origen">
+      <End Role="tbl_cat_origen" EntitySet="tbl_cat_origen" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sts" Association="Self.fk_sts">
+      <End Role="tbl_cat_sts" EntitySet="tbl_cat_sts" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_turno" Association="Self.fk_turno">
+      <End Role="tbl_cat_turno" EntitySet="tbl_cat_turno" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+    <AssociationSet Name="fk_udm" Association="Self.fk_udm">
+      <End Role="tbl_cat_udm" EntitySet="tbl_cat_udm" />
+      <End Role="tbl_incidencias" EntitySet="tbl_incidencias" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

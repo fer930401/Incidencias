@@ -31,11 +31,12 @@
                     </a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav"  <% Response.Write(Session["visibleOpciones"]); %>>
                         <li><a runat="server" href="Index.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                         <li><a runat="server" href="AltaIncidencias.aspx"><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Registra Incidencia</a></li>
                         <li><a runat="server" href="Incidencias.aspx"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Administra Incidencias</a></li>
                         <li><a runat="server" href="Estadisticas.aspx"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Estadisticas</a></li>
+                        <li <% Response.Write(Session["visibleLogout"]); %>><a><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <asp:Label ID="lblUser" runat="server" Text=""></asp:Label></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Opciones <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -43,6 +44,16 @@
                                 <li><a href="#">Modifica opciones</a></li>
                             </ul>
                         </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" <% Response.Write(Session["visibleLogin"]); %>>
+                        <li><a href="Login.aspx"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" <% Response.Write(Session["visibleLogout"]); %>>
+                         <li>
+                             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">
+                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout
+                            </asp:LinkButton>
+                         </li>
                     </ul>
                 </div>
             </div>

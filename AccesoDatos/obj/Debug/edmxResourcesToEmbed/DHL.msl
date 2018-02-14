@@ -64,14 +64,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="sp_cons_datos" FunctionName="DHL_SCModel.Store.sp_cons_datos">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_datos_Result">
-          <ScalarProperty Name="cve_dato" ColumnName="cve_dato" />
-          <ScalarProperty Name="dato" ColumnName="dato" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_cons_incidencias" FunctionName="DHL_SCModel.Store.sp_cons_incidencias">
       <ResultMapping>
         <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_incidencias_Result">
@@ -163,6 +155,14 @@
         <ComplexTypeMapping TypeName="DHL_SCModel.sp_adm_opciones_Result">
           <ScalarProperty Name="error" ColumnName="error" />
           <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_cons_datos" FunctionName="DHL_SCModel.Store.sp_cons_datos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DHL_SCModel.sp_cons_datos_Result">
+          <ScalarProperty Name="cve_dato" ColumnName="cve_dato" />
+          <ScalarProperty Name="dato" ColumnName="dato" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

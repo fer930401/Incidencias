@@ -8,3 +8,14 @@ c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\En
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.dll
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.pdb
 c:\users\fer_9\documents\visual studio 2013\Projects\WebAppReporteIncidencias\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\Entidades.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\Entidades.pdb
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Debug\Entidades.dll
+C:\Users\fergarciav\Documents\Repositorios\Incidencias\Entidades\obj\Debug\Entidades.pdb
